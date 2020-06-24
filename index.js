@@ -8,26 +8,6 @@
 
 function clonator (source) {
 
-  // let newArray = [];
-  let newObj = {};
-
-  if (Array.isArray(source)) {
-    return source.map(function (item) {
-      return clonator(item);
-    });
-    // source.forEach(function (element) {
-    //   newArray.push(element);
-    // });
-    // return newArray;
-  } else if (typeof source === 'object' && source !== null) {
-    for (let key in source) {
-      if (source.hasOwnProperty(key)) {
-        newObj[key] = clonator(source[key]); 
-      }
-    }
-    return newObj;
-  }
-  return source;
 }
 
 module.exports = clonator;
